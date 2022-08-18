@@ -1,0 +1,27 @@
+{
+	// START: Settings for Eslint and Prettier
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+	"[javascript]": {
+		"editor.formatOnSave": false
+	},
+	"[javascriptreact]": {
+		"editor.formatOnSave": false
+	},
+	"editor.codeActionsOnSave": {
+		"source.fixAll": true
+	},
+	"eslint.alwaysShowStatus": true,
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact"
+	],
+	// START: Settings for Prettier
+	"prettier.useTabs": true,
+	"prettier.jsxSingleQuote": false,
+	"prettier.tabWidth": 2,
+	"prettier.arrowParens": "avoid",
+	"prettier.singleQuote": true
+}
