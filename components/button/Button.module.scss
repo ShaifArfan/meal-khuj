@@ -1,0 +1,22 @@
+.button {
+	padding: 1rem 2rem;
+	font-size: 1.8rem;
+	color: var(--white);
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	background-color: var(--secondary-color);
+}
+.variant__primary {
+	background-color: var(--primary-color);
+}
+.variant__secondary {
+	background-color: var(--secondary-color);
+}
+
+@media only screen and (max-width: 768px) {
+	.button {
+		padding: 1rem 1rem;
+		font-size: 1.6rem;
+	}
+}

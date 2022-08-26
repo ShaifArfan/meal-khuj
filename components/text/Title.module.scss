@@ -1,0 +1,12 @@
+.title {
+	text-transform: capitalize;
+	font-size: clamp(1.4rem, 3vw, 1.6rem);
+	span {
+		color: var(--primary-color);
+	}
+}
+.title__primary {
+	font-size: clamp(2rem, 5vw, 4rem);
+	font-family: 'Mirza', sans-serif;
+	line-height: 0.9em;
+}

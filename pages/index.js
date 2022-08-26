@@ -1,5 +1,11 @@
+import About from '../components/home/About';
+import HeroSection from '../components/home/HeroSection';
+
 export default function Home() {
   return (
-    <h1>hello world</h1>
+    <>
+      <HeroSection />
+      <About />
+    </>
   );
 }

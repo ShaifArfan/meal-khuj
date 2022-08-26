@@ -1,0 +1,10 @@
+.text {
+	font-size: 1.6rem;
+	color: var(--text-color);
+	font-family: 'Poppins', sans-serif;
+}
+@media only screen and (max-width: 768px) {
+	.text {
+		font-size: 1.4rem;
+	}
+}

@@ -1,0 +1,35 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--primary-color: #e85d04;
+	--secondary-color: #313235;
+	--background-color: #1f2023;
+	--text-color: #717171;
+	--white: #fff;
+	--black: #000;
+}
+
+html {
+	font-family: 'Poppins', sans-serif;
+	font-size: 10px;
+	color: var(--white);
+	background: var(--background-color);
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* img {
+	width: 100%;
+	height: 100%;
+} */
+
+button {
+	font-family: 'Poppins', sans-serif;
+}
