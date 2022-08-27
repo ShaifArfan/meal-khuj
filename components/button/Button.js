@@ -1,16 +1,32 @@
+import Link from 'next/link';
 import React from 'react';
 import classes from './Button.module.scss';
 
-function Button({ children, variant = 'secondary' }) {
+function ButtonWithLink({ link = '/', children, variant = 'secondary' }) {
+  return (
+    <Link href={link}>
+      <a
+        type="button"
+        className={`${classes.button} ${classes[`variant__${variant}`]}`}
+      >
+        {children}
+      </a>
+    </Link>
+  );
+}
+function Button({
+  children, variant = 'secondary', className, onClickHandler,
+}) {
   return (
     <button
       type="button"
-      className={`${classes.button} ${classes[`variant__${variant}`]}`}
+      className={`${classes.button} ${classes[`variant__${variant}`]} ${className}`}
+      onClick={onClickHandler}
     >
       {children}
-
     </button>
   );
 }
 
-export default Button;
+export default ButtonWithLink;
+export { Button };

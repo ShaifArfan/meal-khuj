@@ -1,0 +1,42 @@
+.pageWrapper {
+	padding: 10rem 0;
+}
+.topContainer {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap: 5rem;
+}
+
+.info {
+	padding-top: 2rem;
+}
+
+.infoText {
+	padding-top: 1rem;
+}
+
+.saveButton {
+	margin-top: 2rem;
+	svg {
+		margin-bottom: -2.5px;
+	}
+}
+
+.ingredientsTable,
+.instructions {
+	margin-top: 10rem;
+}
+
+@media only screen and (max-width: 768px) {
+	.topContainer {
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		gap: 2rem;
+	}
+	.ingredientsTable,
+	.instructions {
+		margin-top: 5rem;
+	}
+}
