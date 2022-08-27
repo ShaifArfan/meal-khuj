@@ -7,11 +7,11 @@ import logo from '../../images/meal_khuj_logo.png';
 function Navbar() {
   return (
     <nav className={classes.navbar}>
-      <div className={classes.logo}>
-        <Link href="/">
+      <Link href="/">
+        <a className={classes.logo}>
           <Image src={logo} />
-        </Link>
-      </div>
+        </a>
+      </Link>
       <ul className={classes.navLinks}>
         <li>
           <Link href="/meals">Meals</Link>

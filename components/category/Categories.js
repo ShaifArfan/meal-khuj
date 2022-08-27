@@ -5,16 +5,16 @@ import classes from './Categories.module.scss';
 export default function Categories({
   setSelectedCategory,
   selectedCategory,
-  isCategoryLoading,
-  isCategoryError,
+  categoryIsLoading,
+  categoryIsError,
   categoryError,
   categories,
   setQuery,
 }) {
-  if (isCategoryLoading) {
+  if (categoryIsLoading) {
     return <div>Loading...</div>;
   }
-  if (isCategoryError) {
+  if (categoryIsError) {
     return (
       <div>
         Error:

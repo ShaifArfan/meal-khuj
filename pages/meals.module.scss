@@ -10,3 +10,9 @@
 	gap: 1rem;
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
+
+.loadingSpinner {
+	padding: 50px 0;
+	display: flex;
+	justify-content: center;
+}
