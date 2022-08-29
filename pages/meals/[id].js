@@ -11,10 +11,11 @@ import Title from '../../components/text/Title';
 import PointText from '../../components/text/PointText';
 import IngredientsTable from '../../components/mealsPage/IngredientsTable';
 import { Button } from '../../components/button/Button';
+import Text from '../../components/text/Text';
 
-const getSingleMeal = async ({ queryKey }) => {
+export const getSingleMeal = async ({ queryKey }) => {
   const { data } = await axios.get(`/lookup.php?i=${queryKey[1]}`);
-  return data?.meals[0];
+  return data?.meals?.[0];
 };
 
 function SingleMeals() {
@@ -95,8 +96,12 @@ function SingleMeals() {
           <PointText className={classes.infoText}>
             tags:
             {' '}
-            {data.strTags.split(',').join(', ')}
+            {data?.strTags?.split(',').join(', ')}
           </PointText>
+
+          {isSaved && (
+            <Text className={classes.greenText}>You already saved the meal.</Text>
+          )}
           <Button variant="primary" className={classes.saveButton} onClickHandler={handleSaveButtonClick}>
             {isSaved ? (
               <>
@@ -120,7 +125,7 @@ function SingleMeals() {
       <div className={classes.instructions}>
         <Title>Instructions</Title>
         {data.strInstructions.split('.').filter((sentence) => sentence !== '').map((sentence) => (
-          <PointText>
+          <PointText key={sentence}>
             {sentence}
             .
           </PointText>

@@ -1,0 +1,21 @@
+.list_container {
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.singleMeal {
+	padding: 2rem;
+	background-color: #393b40;
+	border-radius: 6px;
+}
+.pageTitle {
+	margin-bottom: 2rem;
+}
+.mealTitle {
+	margin-bottom: 1rem;
+}
+
+.pageWrapper {
+	padding: 6rem 0;
+}

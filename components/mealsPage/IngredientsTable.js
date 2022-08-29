@@ -8,20 +8,22 @@ function IngredientsTable({ ingredientsWithMeasures }) {
     <>
       <Title className={classes.title}>Ingredients</Title>
       <table className={classes.ingredientsTable}>
-        {ingredientsWithMeasures.map((ingredient) => (
-          <tr key={ingredient.index}>
-            <td>
-              <Text>
-                {ingredient.ingredient}
-              </Text>
-            </td>
-            <td>
-              <Text>
-                {ingredient.measure}
-              </Text>
-            </td>
-          </tr>
-        ))}
+        <tbody>
+          {ingredientsWithMeasures.map((ingredient) => (
+            <tr key={ingredient.index}>
+              <td>
+                <Text>
+                  {ingredient.ingredient}
+                </Text>
+              </td>
+              <td>
+                <Text>
+                  {ingredient.measure}
+                </Text>
+              </td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     </>
   );
