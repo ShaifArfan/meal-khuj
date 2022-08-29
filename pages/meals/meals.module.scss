@@ -1,3 +1,24 @@
+.meals__page {
+	padding: 5rem 0;
+}
+.text {
+	margin-top: 1rem;
+}
+.meals__container {
+	margin-top: 5rem;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.loadingSpinner {
+	padding: 50px 0;
+	display: flex;
+	justify-content: center;
+}
+
+// single meals styles
+
 .pageWrapper {
 	padding: 10rem 0;
 }

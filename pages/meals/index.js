@@ -2,11 +2,11 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useQuery } from 'react-query';
 import BeatLoader from 'react-spinners/BeatLoader';
-import Categories from '../components/category/Categories';
-import SearchBar from '../components/mealsPage/SearchBar';
-import SingleMealCard from '../components/mealsPage/SingleMealCard';
-import PointText from '../components/text/PointText';
-import Text from '../components/text/Text';
+import Categories from '../../components/category/Categories';
+import SearchBar from '../../components/mealsPage/SearchBar';
+import SingleMealCard from '../../components/mealsPage/SingleMealCard';
+import PointText from '../../components/text/PointText';
+import Text from '../../components/text/Text';
 import classes from './meals.module.scss';
 
 const override = {

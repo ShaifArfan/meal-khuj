@@ -6,7 +6,7 @@ import { BeatLoader } from 'react-spinners';
 import Image from 'next/image';
 import { FaHeartBroken, FaHeart } from 'react-icons/fa';
 import toast from 'react-hot-toast';
-import classes from './singleMeal.module.scss';
+import classes from './meals.module.scss';
 import Title from '../../components/text/Title';
 import PointText from '../../components/text/PointText';
 import IngredientsTable from '../../components/mealsPage/IngredientsTable';
