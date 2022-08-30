@@ -1,16 +1,18 @@
 .ingredientsTable {
 	max-width: 500px;
 	width: 100%;
+	border-spacing: 0px;
 	tr {
 		width: 100%;
 		background-color: #2a2b2e;
 		&:nth-child(even) {
 			background-color: #303134;
 		}
+		&:hover {
+			background-color: rgb(25, 26, 28);
+		}
 		td {
-			border: none;
 			padding: 0.5rem;
-			outline: none;
 		}
 	}
 }

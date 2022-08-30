@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import { useQueries } from 'react-query';
+import { useQueries } from '@tanstack/react-query';
 import { BeatLoader } from 'react-spinners';
 import PointText from '../components/text/PointText';
 import Text from '../components/text/Text';
@@ -18,7 +18,7 @@ function SavedMeals() {
     }
   ));
 
-  const result = useQueries(queries);
+  const result = useQueries({ queries });
 
   useEffect(() => {
     if (localStorage.getItem('savedMeals')) {

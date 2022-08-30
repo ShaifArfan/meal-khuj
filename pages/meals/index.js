@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { useQuery } from 'react-query';
+import { useQuery } from '@tanstack/react-query';
 import BeatLoader from 'react-spinners/BeatLoader';
 import Categories from '../../components/category/Categories';
 import SearchBar from '../../components/mealsPage/SearchBar';
@@ -36,7 +36,7 @@ function Meals() {
 
   const {
     data: categories, isLoading: categoryIsLoading, isError: categoryIsError, error: categoryError,
-  } = useQuery('catagories', getCategories);
+  } = useQuery(['catagories'], getCategories);
 
   const {
     data: queriedData, isLoading: queryIsLoading, isError: queryError,

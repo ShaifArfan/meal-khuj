@@ -1,6 +1,7 @@
 .title {
 	text-transform: capitalize;
 	font-size: clamp(1.4rem, 3vw, 1.6rem);
+	color: var(--text-color-light);
 	span {
 		color: var(--primary-color);
 	}

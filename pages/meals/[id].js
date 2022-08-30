@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import axios from 'axios';
-import { useQuery } from 'react-query';
+import { useQuery } from '@tanstack/react-query';
 import { BeatLoader } from 'react-spinners';
 import Image from 'next/image';
 import { FaHeartBroken, FaHeart } from 'react-icons/fa';
@@ -39,7 +39,7 @@ function SingleMeals() {
     return <div>Error</div>;
   }
 
-  if (isLoading) {
+  if (isLoading && !data) {
     return (
       <BeatLoader color="#fff" loading={isLoading} size={20} />
     );
@@ -47,7 +47,6 @@ function SingleMeals() {
 
   const ingredients = Object.keys(data).filter((key) => key.startsWith('strIngredient')).filter((key) => data[key] !== '' && data[key] !== null);
 
-  // console.log(measures.map((key) => data[key]));
   const ingredientsWithMeasures = ingredients.map((key, index) => ({
     index: index + 1,
     ingredient: data[key],
