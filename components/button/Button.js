@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import Link from 'next/link';
 import React from 'react';
 import classes from './Button.module.scss';
@@ -20,7 +21,7 @@ function Button({
   return (
     <button
       type="button"
-      className={`${classes.button} ${classes[`variant__${variant}`]} ${className}`}
+      className={clsx(classes.button, classes[`variant__${variant}`], className)}
       onClick={onClickHandler}
     >
       {children}

@@ -7,7 +7,15 @@ import Layout from '../components/layout/Layout';
 import '../styles/global.css';
 import { getSingleMeal } from './meals/[id]';
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      cacheTime: 1 * 60 * 60 * 1000,
+      staleTime: 1 * 60 * 60 * 1000,
+    },
+  },
+});
+
 axios.defaults.baseURL = 'https://www.themealdb.com/api/json/v1/1/';
 
 function MyApp({ Component, pageProps }) {
