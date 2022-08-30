@@ -30,7 +30,7 @@ function SavedMeals() {
     <div className={classes.pageWrapper}>
       <Title variant="primary" className={classes.pageTitle}>My Saved Meal List</Title>
       <div className={classes.list_container}>
-        {savedMealsId.length < 0 && <Text>You have no saved meals</Text>}
+        {savedMealsId.length <= 0 && <Text>You have no saved meals</Text>}
         {result && result.map(({ data, isLoading }, index) => {
           if (isLoading) {
             return (
