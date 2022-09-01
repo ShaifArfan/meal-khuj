@@ -28,7 +28,8 @@ function MyApp({ Component, pageProps }) {
     } else {
       localStorage.setItem('savedMeals', JSON.stringify([]));
     }
-  });
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <Toaster
