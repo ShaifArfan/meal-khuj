@@ -32,6 +32,8 @@ function SingleMeals() {
       } else {
         setIsSaved(false);
       }
+    } else {
+      localStorage.setItem('savedMeals', JSON.stringify([]));
     }
   }, [id]);
 
@@ -39,9 +41,9 @@ function SingleMeals() {
     return <div>Error</div>;
   }
 
-  if (isLoading && !data) {
+  if (isLoading || !data) {
     return (
-      <BeatLoader color="#fff" loading={isLoading} size={20} />
+      <BeatLoader color="#fff" size={20} />
     );
   }
 
@@ -54,23 +56,17 @@ function SingleMeals() {
   }));
 
   const handleSaveButtonClick = async () => {
-    if (localStorage.getItem('savedMeals') === null) {
-      localStorage.setItem('savedMeals', JSON.stringify([data.idMeal]));
+    const savedMeals = JSON.parse(localStorage.getItem('savedMeals'));
+    if (!isSaved) {
+      savedMeals.push(data.idMeal);
+      localStorage.setItem('savedMeals', JSON.stringify(savedMeals));
       toast.success('Meal saved successfully');
       setIsSaved(true);
     } else {
-      const savedMeals = JSON.parse(localStorage.getItem('savedMeals'));
-      if (!isSaved) {
-        savedMeals.push(data.idMeal);
-        localStorage.setItem('savedMeals', JSON.stringify(savedMeals));
-        toast.success('Meal saved successfully');
-        setIsSaved(true);
-      } else {
-        savedMeals.splice(savedMeals.indexOf(data.idMeal), 1);
-        localStorage.setItem('savedMeals', JSON.stringify(savedMeals));
-        setIsSaved(false);
-        toast.error('Meal Removed successfully');
-      }
+      savedMeals.splice(savedMeals.indexOf(data.idMeal), 1);
+      localStorage.setItem('savedMeals', JSON.stringify(savedMeals));
+      setIsSaved(false);
+      toast.error('Meal Removed successfully');
     }
   };
 
