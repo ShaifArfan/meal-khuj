@@ -7,7 +7,7 @@ import Text from '../text/Text';
 function Footer() {
   return (
     <footer className={classes.footer}>
-      <Image src={Logo} />
+      <Image src={Logo} alt="meal-khuj logo" />
       <Text>
         Find the perfect
         meal recipe

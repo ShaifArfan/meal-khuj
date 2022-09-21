@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { Toaster } from 'react-hot-toast';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import '../styles/global.css';
 import { getSingleMeal } from './meals/[id]';
@@ -31,20 +32,26 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <Toaster
-        position="bottom-right"
-        toastOptions={{
-          style: {
-            fontSize: '1.4rem',
-          },
-        }}
-      />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-      <ReactQueryDevtools initialIsOpen={false} />
-    </QueryClientProvider>
+    <>
+      <Head>
+        <title>Meal-khuj</title>
+        <meta name="description" content="Meal-khuj is a listing website of meal recipe" />
+      </Head>
+      <QueryClientProvider client={queryClient}>
+        <Toaster
+          position="bottom-right"
+          toastOptions={{
+            style: {
+              fontSize: '1.4rem',
+            },
+          }}
+        />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+        <ReactQueryDevtools initialIsOpen={false} />
+      </QueryClientProvider>
+    </>
   );
 }
 

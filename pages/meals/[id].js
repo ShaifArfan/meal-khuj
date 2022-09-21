@@ -74,7 +74,7 @@ function SingleMeals() {
     <div className={classes.pageWrapper}>
       <div className={classes.topContainer}>
         <div className={classes.img}>
-          <Image src={data.strMealThumb} height={300} width={300} />
+          <Image src={data.strMealThumb} height={300} width={300} alt={data.strMeal} />
         </div>
         <div className={classes.info}>
           <Title variant="primary">{data.strMeal}</Title>

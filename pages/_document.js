@@ -5,7 +5,7 @@ import Document, {
 class MyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html lang="eng">
         <Head>
           {/* fonts */}
           <link href="https://fonts.googleapis.com/css2?family=Mirza:wght@700&family=Poppins:wght@400&display=swap" rel="stylesheet" />

@@ -9,7 +9,7 @@ function Navbar() {
     <nav className={classes.navbar}>
       <Link href="/">
         <a className={classes.logo}>
-          <Image src={logo} />
+          <Image src={logo} alt="meal-khuj logo" />
         </a>
       </Link>
       <ul className={classes.navLinks}>

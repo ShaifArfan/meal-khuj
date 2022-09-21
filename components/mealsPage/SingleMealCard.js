@@ -8,7 +8,7 @@ function SingleMealCard({ meal }) {
   return (
     <Link href={`/meals/${meal.idMeal}`}>
       <a className={classes.item}>
-        <Image src={meal.strMealThumb} height="200" width="300" />
+        <Image src={meal.strMealThumb} height="200" width="300" alt={meal.strMeal} />
         <Title className={classes.title} variant="secondary">{meal.strMeal}</Title>
       </a>
     </Link>
